@@ -1,0 +1,8 @@
+release/
+compiler/temp
+compiler/node_modules
+node_modules
+*.log
+public
+coverage
+/.DS_Store
