@@ -11,9 +11,6 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
-    "@vincent_za/assets": "^1.0.12",
-    "@vincent_za/styles": "^1.0.12",
-    "@vincent_za/utils": "^1.0.12",
     "axios": "^0.19.2",
     "classnames": "^2.2.5",
     "history": "^4.10.1",
