@@ -4,7 +4,7 @@ import { css } from 'styled-components'
 export const FONT_SIZE___SM = '0.9rem'
 export const FONT_SIZE__SM = '1rem'
 export const FONT_SIZE_SM = '1.1rem'
-export const FONT_SIZE_NORMAL = '1.2rem'
+export const FONT_SIZE_MD = '1.2rem'
 export const FONT_SIZE_LG = '1.4rem'
 export const FONT_SIZE__LG = '1.6rem'
 
@@ -24,8 +24,6 @@ export const SIZE_XLG = `${SIZE_XLG_UNIT}rem`
 
 
 // colors
-export const CYAN = '#00b6ea'
-
 export const PASTEL_GREEN = '#7bd37c'
 export const SUNSET_ORANGE = '#ff5d5d'
 export const RED_ORANGE = '#ff4d4d'
@@ -55,10 +53,39 @@ export const DARK_TRANSPARENT = 'rgba(0, 0, 0, 0.4)'
 // styles
 export const BOX_SHADOW_LIGHT = '0 2px 11px -7px #0000004f'
 
+// scrollbar
+export const SCROLLBARS_MIN_LIGHT = `
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+    border-left: 1px solid ${WHITE_SMOKE};
+  }
+
+  ::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: none;
+    border-radius: 0;
+    background: #b3c1c5;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+`
+
 
 // media queries
 export const sizes = {
-  sm: 768,
+  sm: 550,
+  md: 920,
 }
 
 export const media = Object.keys(sizes).reduce((acc, label) => {

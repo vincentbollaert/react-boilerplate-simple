@@ -69,4 +69,7 @@ export default `
     border-collapse: collapse;
     width: 100%;
   }
+  th {
+    text-align: left;
+  }
 `
