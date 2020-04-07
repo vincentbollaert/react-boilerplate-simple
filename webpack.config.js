@@ -1,3 +1,5 @@
+// https://gist.github.com/vincentbollaert/e90def9b351d8d97c90ef7cfd887685e
+
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const path = require('path')
