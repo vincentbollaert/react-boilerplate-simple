@@ -6,24 +6,23 @@
   "author": "Vincent Bollaert <vincentbollaert@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "develop": "webpack-dev-server --progress --watch",
-    "production": "webpack --config webpack.prod.config.js"
+    "develop": "webpack-dev-server --config-register @babel/register --config webpack.dev.js --progress --watch",
+    "production": "webpack --config-register @babel/register --config webpack.prod.js"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
-    "axios": "^0.19.2",
+    "@babel/register": "^7.9.0",
     "classnames": "^2.2.5",
+    "compression-webpack-plugin": "^3.1.0",
     "history": "^4.10.1",
+    "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.20",
-    "react-redux": "^7.2.0",
-    "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
-    "react-router-redux": "4.0.8",
-    "redux": "^4.0.5",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -51,7 +50,6 @@
     "html-loader": "^1.0.0",
     "html-webpack-plugin": "^4.0.1",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.1",
     "optimize-js-plugin": "^0.0.4",
     "raw-loader": "^4.0.0",
     "sass-loader": "^8.0.2",
