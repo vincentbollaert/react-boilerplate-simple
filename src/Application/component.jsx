@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
-import { createBrowserHistory } from 'history'
 import 'normalize.css'
 import { reset, media, BOX_SHADOW_LIGHT, WHITE, SIZE_XLG } from '../styles'
 
@@ -40,9 +39,8 @@ const ContentWrap = styled.div`
 `
 
 const Application = () => {
-  const history = createBrowserHistory()
   return (
-    <Router history={history}>
+    <Router>
       <GlobalStyle />
       <PageWrap>
         <Header />
