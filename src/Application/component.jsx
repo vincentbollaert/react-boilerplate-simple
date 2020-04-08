@@ -1,9 +1,12 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
+import { createBrowserHistory } from 'history'
+import 'normalize.css'
+
 import { reset, media, BOX_SHADOW_LIGHT, WHITE, SIZE_XLG } from '../styles'
 
-import { homePathSegment } from './Root/paths'
+import { homePath } from './Root/paths'
 import Header from './Header/component'
 import Home from '../pages/Home/container'
 
@@ -38,14 +41,18 @@ const ContentWrap = styled.div`
 `
 
 const Application = () => {
+  const history = createBrowserHistory()
   return (
-    <Router>
+    <Router history={history}>
       <GlobalStyle />
       <PageWrap>
         <Header />
         <PageSpacer>
           <ContentWrap>
-            <Route path={homePathSegment()} component={Home} />
+            <Switch>
+              <Route exact path={homePath()} component={Home} />
+              <Redirect to={homePath()} />
+            </Switch>
           </ContentWrap>
         </PageSpacer>
       </PageWrap>
