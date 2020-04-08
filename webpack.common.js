@@ -1,21 +1,17 @@
 // https://gist.github.com/vincentbollaert/e90def9b351d8d97c90ef7cfd887685e
 
-const webpack = require('webpack')
-const HtmlWebPackPlugin = require('html-webpack-plugin')
-const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+import webpack from 'webpack'
+import HtmlWebPackPlugin from 'html-webpack-plugin'
+import path from 'path'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
-const devMode = process.env.NODE_ENV !== 'production'
 const entryPath = './src/index.jsx'
 const outputPath = './public'
 const PUBLIC_PATH = '/'
 
 const config = {
-  mode: 'development',
-
   entry: {
     main: path.resolve(__dirname, entryPath),
-
   },
 
   output: {
@@ -31,54 +27,20 @@ const config = {
     'react/lib/ReactContext': true,
   },
 
-  devServer: {
-    inline: true,
-    port: 3000,
-    historyApiFallback: true,
-    proxy: {
-      '/api': 'http://localhost:8080',
-    },
-  },
-
   resolve: {
     extensions: ['.js', '.jsx'],
   },
 
-  devtool: 'source-map',
-
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        use: [{ loader: 'babel-loader' }],
-      },
-      {
-        test: /\.html$/,
-        use: [{ loader: 'html-loader' }],
-      },
-      {
-        test: /\.(css|scss)$/,
-        use: [
-          { loader: devMode ? 'style-loader' : MiniCssExtractPlugin.loader },
-          { loader: 'css-loader' },
-          { loader: 'sass-loader' },
-        ],
-      },
-      {
-        test: /\.md$/,
-        use: [
-          { loader: 'html-loader' },
-          { loader: 'highlight-loader' },
-          { loader: 'markdown-loader' },
-        ],
-      },
+      { test: /\.(js|jsx)$/, use: 'babel-loader' },
+      { test: /\.html$/, use: 'html-loader' },
+      { test: /\.md$/, use: [ 'html-loader', 'highlight-loader', 'markdown-loader'] },
+      { test: /\.svg$/, use: 'raw-loader' },
+
       {
         test: /\.(woff|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [{ loader: 'file-loader' }],
-      },
-      {
-        test: /\.svg$/,
-        use: [{ loader: 'raw-loader' }],
+        use: 'file-loader',
       },
       {
         test: /\.(ico|jpe?g|png)$/i,
