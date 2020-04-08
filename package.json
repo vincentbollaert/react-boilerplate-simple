@@ -6,8 +6,8 @@
   "author": "Vincent Bollaert <vincentbollaert@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "develop": "webpack-dev-server --progress --watch",
-    "production": "webpack --config webpack.prod.config.js"
+    "develop": "webpack-dev-server --config-register @babel/register --config webpack.dev.js --progress --watch",
+    "production": "webpack --config-register @babel/register --config webpack.prod.js"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
