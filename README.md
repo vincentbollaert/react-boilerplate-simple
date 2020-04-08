@@ -2,7 +2,7 @@
 
 ### Running the app
 ```sh
-$ npm run develop // starts dev server
+$ npm run develop // starts dev server @ http://localhost:3000
 ```
 ```sh
 $ npm run production // creates a production build
@@ -10,9 +10,7 @@ $ npm run production // creates a production build
 
 ### Technologies used
 * React
-* Redux
 * Webpack
 * Babel
 * styled components
-* Axios
 * ESLint
