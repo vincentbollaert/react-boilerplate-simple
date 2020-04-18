@@ -16,6 +16,11 @@
     "browser": true,
     "node": true
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
     "react/require-extension": 0,
     "react/forbid-prop-types": 0,
@@ -29,6 +34,7 @@
     "react/jsx-one-expression-per-line": 0,
     "react/jsx-curly-brace-presence": 0,
     "react/jsx-props-no-spreading": 0, // allow prop spread
+    "react/display-name": 0, // do not require a display name
     "no-confusing-arrow": 0,
     "max-len": [1, 120, 4],
     "no-unused-expressions": 1,
@@ -49,7 +55,8 @@
     "quotes": [1, "single"],
     "semi": [2, "never"],
     "arrow-body-style": 0, // arrow functions may be followed by curcly praces
-    "arrow-parens": 0 // arrow functions do not require parenthesis
+    "arrow-parens": 0, // arrow functions do not require parenthesis
+    "consistent-return": 0 // do not require functions return something
   },
   "globals": {
     "document": true,
