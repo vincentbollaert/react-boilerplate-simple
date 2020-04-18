@@ -1,7 +1,5 @@
 // https://gist.github.com/vincentbollaert/e90def9b351d8d97c90ef7cfd887685e
 
-import { css } from 'styled-components'
-
 // font-size
 export const FONT_SIZE___SM = '0.9rem'
 export const FONT_SIZE__SM = '1rem'
@@ -83,19 +81,13 @@ export const SCROLLBARS_MIN_LIGHT = `
   }
 `
 
-
 // media queries
-export const sizes = {
-  sm: 550,
-  md: 920,
+const customMediaQuery = (minWidth) =>
+  `@media (min-width: ${minWidth}px)`
+
+export const media = {
+  custom: customMediaQuery,
+  sm: customMediaQuery(540),
+  md: customMediaQuery(940),
+  lg: customMediaQuery(1140),
 }
-
-export const media = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (min-width: ${sizes[label]}px) {
-      ${css(...args)}
-    }
-  `
-
-  return acc
-}, {})
