@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
-import 'normalize.css'
 import { reset, media, BOX_SHADOW_LIGHT, WHITE, SIZE_XLG } from '../styles'
 
 import { homePath } from './paths'
