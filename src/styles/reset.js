@@ -69,6 +69,8 @@ export default `
   }
   table {
     border-collapse: collapse;
+    table-layout: fixed;
+    text-align: center;
     width: 100%;
   }
   th {
