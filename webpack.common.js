@@ -33,7 +33,7 @@ const config = {
 
   module: {
     rules: [
-      { test: /\.(js|jsx)$/, use: 'babel-loader' },
+      { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: [/node_modules/] },
       { test: /\.html$/, use: 'html-loader' },
       { test: /\.md$/, use: [ 'html-loader', 'highlight-loader', 'markdown-loader'] },
       { test: /\.svg$/, use: 'raw-loader' },
@@ -53,7 +53,6 @@ const config = {
   },
 
   plugins: [
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
     new MiniCssExtractPlugin({
       fileName: 'style.css',
     }),
@@ -62,11 +61,6 @@ const config = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('development'),
-      },
-    }),
   ],
 }
 

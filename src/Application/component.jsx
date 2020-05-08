@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
-import 'normalize.css'
 import { reset, media, BOX_SHADOW_LIGHT, WHITE, SIZE_XLG } from '../styles'
 
 import { homePath } from './paths'
@@ -26,9 +25,9 @@ const PageSpacer = styled.div`
   width: 100%;
   max-width: 92rem;
 
-  ${media.sm`
+  ${media.sm} {
     padding: 6rem 8.2rem;
-  `};
+  };
 `
 const ContentWrap = styled.div`
   position: relative;
