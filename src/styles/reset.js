@@ -62,6 +62,7 @@ export default `
     --dark-transparency: rgba(0, 0, 0, 0.4);
 
     --transition: 0.2s ease-out;
+    --box-shadow-light: 0 2px 11px -7px #0000004f;
   }
   *,
   *::after,
