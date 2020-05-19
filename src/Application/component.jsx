@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
-import { reset, media, BOX_SHADOW_LIGHT, WHITE, SIZE_XLG } from '../styles'
+import { reset, media } from '../styles'
 
 import { homePath } from './paths'
 import Header from './Header/component'
@@ -21,7 +21,7 @@ const PageWrap = styled.div`
 const PageSpacer = styled.div`
   grid-area: main;
   margin: 0 auto;
-  padding: ${SIZE_XLG} 4.2rem;
+  padding: var(--size-xlg) 4.2rem;
   width: 100%;
   max-width: 92rem;
 
@@ -33,8 +33,8 @@ const ContentWrap = styled.div`
   position: relative;
   padding: 2.8rem 0;
   height: 100%;
-  background-color: ${WHITE};
-  box-shadow: ${BOX_SHADOW_LIGHT};
+  background-color: var(--white);
+  box-shadow: var(--box-shadow-light);
 `
 
 const Application = () => {

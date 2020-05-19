@@ -1,20 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
-import { WHITE, BOX_SHADOW_LIGHT, SIZE_LG, SIZE_MD, SIZE_SM, WHITE_SMOKE } from '../../styles'
 
 const Github = styled.a`
-  margin-left: ${SIZE_MD};
-  padding: ${SIZE_SM} ${SIZE_MD};
-  background-color: ${WHITE_SMOKE};
+  margin-left: var(--size-md);
+  padding: var(--size-sm) var(--size-md);
+  background-color: var(--white-smoke);
   border-radius: 2px;
 `
 const Wrap = styled.div`
   grid-area: header;
   display: flex;
   align-items: center;
-  padding: ${SIZE_LG};
-  background-color: ${WHITE};
-  box-shadow: ${BOX_SHADOW_LIGHT};
+  padding: var(--size-lg);
+  background-color: var(--white);
+  box-shadow: var(--box-shadow-light);
 `
 
 const Header = () => (
