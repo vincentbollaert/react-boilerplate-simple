@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { flex } from '../../styles'
 
 const Github = styled.a`
   margin-left: var(--size-md);
@@ -9,7 +8,8 @@ const Github = styled.a`
   border-radius: 2px;
 `
 const Wrap = styled.div`
-  ${flex({ isCenter: true })};
+  display: flex;
+  justify-content: center;
   grid-area: header;
   padding: var(--size-lg);
   background-color: var(--white);

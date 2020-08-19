@@ -11,8 +11,6 @@
     "production:preview": "http-server build"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.4.0",
-    "@types/react-redux": "^7.1.9",
     "axios": "^0.20.0-0",
     "classnames": "^2.2.6",
     "compression-webpack-plugin": "^5.0.0",
@@ -22,7 +20,6 @@
     "react": "^17.0.0-rc.0",
     "react-dom": "^17.0.0-rc.0",
     "react-hot-loader": "^4.12.21",
-    "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.1.1",
     "ts-node": "^8.10.2",
@@ -45,7 +42,6 @@
     "http-server": "^0.12.3",
     "mini-css-extract-plugin": "^0.10.0",
     "raw-loader": "^4.0.1",
-    "redux-saga": "^1.1.3",
     "rimraf": "^3.0.2",
     "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
